@@ -1,0 +1,32 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import style from './List'
+
+const List = ({ people }) => (
+  <>
+    {people.map((person) => {
+      const {
+        id, name, age, image,
+      } = person;
+      return (
+        <article key={id} className="person">
+          <img src={image} alt={name} />
+          <div>
+            <h4>{name}</h4>
+            <p>{age}</p>
+          </div>
+        </article>
+      );
+    })}
+  </>
+);
+
+List.propTypes = {
+  people: PropTypes.arrayOf(PropTypes.any),
+};
+
+List.defaultProps = {
+  people: [],
+};
+
+export default List;
