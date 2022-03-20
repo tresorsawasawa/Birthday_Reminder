@@ -21,7 +21,7 @@ const List = ({ people }) => (
 );
 
 List.propTypes = {
-  people: PropTypes.arrayOf(PropTypes.any),
+  people: PropTypes.arrayOf(PropTypes.object),
 };
 
 List.defaultProps = {
