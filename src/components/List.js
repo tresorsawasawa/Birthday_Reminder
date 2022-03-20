@@ -21,7 +21,7 @@ const List = ({ people }) => (
 );
 
 List.propTypes = {
-  people: PropTypes.arrayOf(PropTypes.object),
+  people: PropTypes.arrayOf(PropTypes.object.isRequired),
 };
 
 List.defaultProps = {
